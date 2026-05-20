@@ -280,27 +280,6 @@
       transition: all 0.3s;
     }
 
-    /* WITH THIS */
-    /* @media (max-width: 700px) {
-  .nav-pill {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 4.5rem; left: 5vw; right: 5vw;
-    border-radius: 16px;
-    padding: 1rem;
-    gap: 0.2rem;
-  }
-
-  .nav-pill.open {
-    display: flex !important;
-  }
-
-  .nav-toggle { display: flex; }
-  .nav-links { flex-direction: column; width: 100%; }
-  .nav-links a { width: 100%; text-align: center; }
-  .nav-cta { margin: 0.4rem 0 0; width: 100%; justify-content: center; }
-} */
 
     /* ─── Hero ────────────────────────────────────────────────────── */
     #hero {
@@ -644,95 +623,6 @@
       color: var(--ink);
     }
 
-    /* ─── Experience ──────────────────────────────────────────────── */
-    .exp-timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
-
-    .exp-timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      bottom: 0;
-      width: 1px;
-      background: var(--rule);
-    }
-
-    .exp-item {
-      position: relative;
-      padding-bottom: 3rem;
-    }
-
-    .exp-item:last-child {
-      padding-bottom: 0;
-    }
-
-    .exp-dot {
-      position: absolute;
-      left: -2rem;
-      top: 8px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--cream);
-      border: 1.5px solid var(--rule);
-      transform: translateX(-4px);
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .exp-item:hover .exp-dot {
-      background: var(--gold);
-      border-color: var(--gold);
-    }
-
-    .exp-meta {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 0.35rem;
-      flex-wrap: wrap;
-    }
-
-    .exp-company {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--ink);
-    }
-
-    .exp-period {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      white-space: nowrap;
-      padding-top: 0.3rem;
-    }
-
-    .exp-role {
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      color: var(--ink-muted);
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .exp-desc {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      color: var(--ink-light);
-      margin-bottom: 1rem;
-    }
-
-    .exp-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
 
     /* ─── Skills ──────────────────────────────────────────────────── */
     .skills-grid {
@@ -828,112 +718,6 @@
       to {
         transform: scaleX(1);
       }
-    }
-
-    /* ─── Education ───────────────────────────────────────────────── */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .edu-card {
-      border: 1px solid var(--rule);
-      padding: 2rem;
-      background: var(--white);
-      position: relative;
-      transition: box-shadow 0.25s;
-    }
-
-    .edu-card:hover {
-      box-shadow: 4px 4px 0 var(--rule);
-    }
-
-    .edu-type {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
-    }
-
-    .edu-degree {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--ink);
-      margin-bottom: 0.25rem;
-      line-height: 1.3;
-    }
-
-    .edu-school {
-      font-size: 0.85rem;
-      color: var(--ink-muted);
-      margin-bottom: 1rem;
-    }
-
-    .edu-year {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      color: var(--ink-muted);
-    }
-
-    /* ─── Certifications ──────────────────────────────────────────── */
-    .cert-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-
-    .cert-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      padding: 1.4rem;
-      border: 1px solid var(--rule);
-      background: var(--white);
-      transition: border-color 0.25s;
-    }
-
-    .cert-item:hover {
-      border-color: var(--gold);
-    }
-
-    .cert-badge {
-      width: 36px;
-      height: 36px;
-      background: var(--cream-dark);
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.55rem;
-      color: var(--gold);
-      letter-spacing: 0.05em;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .cert-info {
-      flex: 1;
-    }
-
-    .cert-name {
-      font-size: 0.88rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 0.2rem;
-    }
-
-    .cert-issuer {
-      font-size: 0.75rem;
-      color: var(--ink-muted);
-      font-family: var(--font-mono);
     }
 
     /* ─── Projects ────────────────────────────────────────────────── */
@@ -1358,9 +1142,9 @@
     <div class="nav-pill" id="navPill">
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <!-- <li><a href="#experience">Experience</a></li> -->
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
+        <!-- <li><a href="#education">Education</a></li> -->
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1499,82 +1283,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ EXPERIENCE ════════════════════════════════ -->
-  <section id="experience" class="section section-alt">
-    <div class="container">
-      <p class="section-label reveal">Experience</p>
-      <h2 class="section-title reveal">Professional Timeline</h2>
-
-      <div class="exp-timeline">
-
-        <div class="exp-item reveal">
-          <div class="exp-dot"></div>
-          <div class="exp-meta">
-            <span class="exp-company">Company Name, Inc.</span>
-            <span class="exp-period">2022 — Present</span>
-          </div>
-          <p class="exp-role">QA &amp; Systems Implementation Engineer</p>
-          <p class="exp-desc">
-            Led end-to-end QA lifecycle for enterprise software deployments, including requirements analysis,
-            test plan design, execution, defect tracking, and UAT coordination. Implemented automated regression
-            suites, reducing testing time by 40%. Collaborated with cross-functional teams to ensure smooth
-            system rollouts across multiple client environments.
-          </p>
-          <div class="exp-tags">
-            <span class="tag">Selenium</span>
-            <span class="tag">JIRA</span>
-            <span class="tag">TestRail</span>
-            <span class="tag">SQL</span>
-            <span class="tag">ERP Systems</span>
-            <span class="tag">Agile / Scrum</span>
-          </div>
-        </div>
-
-        <div class="exp-item reveal">
-          <div class="exp-dot"></div>
-          <div class="exp-meta">
-            <span class="exp-company">Previous Employer Ltd.</span>
-            <span class="exp-period">2020 — 2022</span>
-          </div>
-          <p class="exp-role">Data Analyst &amp; BI Developer</p>
-          <p class="exp-desc">
-            Designed and maintained interactive dashboards and reports for senior management using Power BI
-            and Tableau. Built ETL pipelines for data transformation and warehouse loading. Conducted statistical
-            analysis and predictive modelling to support business decisions.
-          </p>
-          <div class="exp-tags">
-            <span class="tag">Power BI</span>
-            <span class="tag">Tableau</span>
-            <span class="tag">Python</span>
-            <span class="tag">SQL Server</span>
-            <span class="tag">ETL</span>
-          </div>
-        </div>
-
-        <div class="exp-item reveal">
-          <div class="exp-dot"></div>
-          <div class="exp-meta">
-            <span class="exp-company">Another Organization</span>
-            <span class="exp-period">2018 — 2020</span>
-          </div>
-          <p class="exp-role">Junior Systems Analyst</p>
-          <p class="exp-desc">
-            Supported implementation of core business systems including CRM and ERP modules.
-            Wrote technical documentation, trained end-users, and provided post-go-live support.
-            Conducted gap analysis and process mapping for system improvement initiatives.
-          </p>
-          <div class="exp-tags">
-            <span class="tag">Business Analysis</span>
-            <span class="tag">CRM</span>
-            <span class="tag">ERP</span>
-            <span class="tag">Documentation</span>
-            <span class="tag">Training</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════════════ SKILLS ════════════════════════════════════ -->
   <section id="skills" class="section">
@@ -1720,98 +1428,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ EDUCATION ═════════════════════════════════ -->
-  <section id="education" class="section section-alt">
-    <div class="container">
-      <p class="section-label reveal">Education</p>
-      <h2 class="section-title reveal">Academic Background</h2>
-
-      <div class="edu-grid">
-
-        <div class="edu-card reveal">
-          <p class="edu-type">Professional Certificate</p>
-          <h3 class="edu-degree">Software Testing and Automation</h3>
-          <p class="edu-school">University of Minnesota, Minnesota</p>
-          <p class="edu-year">2026</p>
-        </div>
-
-        <div class="edu-card reveal">
-          <p class="edu-type">Professional Certificate</p>
-          <h3 class="edu-degree">Machine Learning Specialization</h3>
-          <p class="edu-school">Stanford University Online Program</p>
-          <p class="edu-year">2026</p>
-        </div>
-
-        <div class="edu-card reveal">
-          <p class="edu-type">Undergraduate</p>
-          <h3 class="edu-degree">B.Sc. Biochemistry</h3>
-          <p class="edu-school">University For Development Studies, Ghana</p>
-          <p class="edu-year">2018 — 2022</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════ CERTIFICATIONS ════════════════════════════ -->
-  <section id="certifications" class="section">
-    <div class="container">
-      <p class="section-label reveal">Credentials</p>
-      <h2 class="section-title reveal">Certifications</h2>
-
-      <div class="cert-list">
-
-        <div class="cert-item reveal">
-          <div class="cert-badge">GIT</div>
-          <div class="cert-info">
-            <p class="cert-name">Google IT Support Specialization</p>
-            <p class="cert-issuer">Google · Feb 2026</p>
-          </div>
-        </div>
-
-        <div class="cert-item reveal">
-          <div class="cert-badge">IBM</div>
-          <div class="cert-info">
-            <p class="cert-name">IBM Data Analyst Professional Certificate</p>
-            <p class="cert-issuer">IBM / Coursera · Nov 2025</p>
-          </div>
-        </div>
-
-        <div class="cert-item reveal">
-          <div class="cert-badge">GPM</div>
-          <div class="cert-info">
-            <p class="cert-name">Google Project Management Professional Certificate</p>
-            <p class="cert-issuer">Google · Oct 2025</p>
-          </div>
-        </div>
-
-        <div class="cert-item reveal">
-          <div class="cert-badge">DA</div>
-          <div class="cert-info">
-            <p class="cert-name">Google Data Analytics Professional Certificate</p>
-            <p class="cert-issuer">Google · Jul 2025</p>
-          </div>
-        </div>
-
-        <div class="cert-item reveal">
-          <div class="cert-badge">KNME</div>
-          <div class="cert-info">
-            <p class="cert-name">KNIME Data Science Professional Certificate</p>
-            <p class="cert-issuer">KNIME · Jul 2025</p>
-          </div>
-        </div>
-
-        <div class="cert-item reveal">
-          <div class="cert-badge">ANA</div>
-          <div class="cert-info">
-            <p class="cert-name">Anaconda Python for Data Science Certificate</p>
-            <p class="cert-issuer">Anaconda · Jul 2025</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ═══════════════════ PROJECTS ══════════════════════════════════ -->
   <section id="projects" class="section section-alt">
@@ -2079,7 +1695,7 @@
       <span class="footer-name">Eric I. Ayitey</span>
       <ul class="footer-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <!-- <li><a href="#experience">Experience</a></li> -->
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
